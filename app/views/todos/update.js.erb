@@ -1,0 +1,10 @@
+// $("#myupdatetodo_<%= @todo.id %>").modal('hide');
+// $("#todo_<%= @todo.id %>").fadeOut(500, function(){
+//     $(this).remove();
+//     $("#container_todos").prepend('<%= j render @todo %>');
+// });
+
+$('.edit').bind('ajax:success', function () {
+  $(this).closest('tr').fadeOut();
+})
+// $('#update-todo a').hide().parent().append("<%= j render 'form', todo: @todo %>");
