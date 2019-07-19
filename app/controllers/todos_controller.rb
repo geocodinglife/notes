@@ -28,6 +28,7 @@ class TodosController < ApplicationController
 
     respond_to do |format|
       if @todo.save
+        format.js
         format.html { redirect_to @todo, notice: 'Todo was successfully created.' }
         format.json { render :show, status: :created, location: @todo }
       else
